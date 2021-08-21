@@ -1,0 +1,9 @@
+package org.backendbuilder.restapi.service;
+
+import org.backendbuilder.restapi.model.User;
+
+public interface UserService {
+
+    void save(User user);
+
+}
