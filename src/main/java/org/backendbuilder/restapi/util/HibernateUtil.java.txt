@@ -1,0 +1,30 @@
+package org.backendbuilder.restapi.util;
+
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.service.ServiceRegistry;
+import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+
+public class HibernateUtil {
+
+    private static SessionFactory sessionFactory;
+
+    public static SessionFactory getSessionFactory() {
+        return sessionFactory;
+    }
+   
+    public static void main(String[] args) {
+        System.out.println("SessionFactory starting");
+        try {
+            Configuration configuration = new Configuration().configure();
+            ServiceRegistry registry = new StandardServiceRegistryBuilder()
+                .applySettings(configuration.getProperties())
+                .build();
+            sessionFactory = configuration.buildSessionFactory(registry);
+            System.out.println("SessionFactory started");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    
+}

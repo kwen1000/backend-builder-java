@@ -1,8 +1,4 @@
-# Need these when setting up
 application.properties
-hibernate.cfg.xml
-
-
 
 *.java.hsp
 *.sonarj

@@ -1,9 +1,9 @@
 # backend-builder-java
 
-You'll need to create the files:
-  - `application.properties`
-  - `hibernate.cfg.xml`
+You'll need an `application.properties` in the resources folder.
 
-To run use either:
-  - `mvn spring-boot:run`
-  - `mvn clean install && java -jar ./target/*.jar`
+To build and run, use either:
+  - `mvn clean install && mvn spring-boot:run`
+  - `mvn clean install && java -jar ./target/*.jar` (This might not work)
+
+You can also just run `mvn spring-boot:run` by itself, but it won't delete the target folder nor rebuild.

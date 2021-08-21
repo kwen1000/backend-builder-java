@@ -1,0 +1,9 @@
+package org.backendbuilder.restapi.dao;
+
+import org.backendbuilder.restapi.model.User;
+
+public interface UserDao {
+
+    void save(User user);
+
+}
