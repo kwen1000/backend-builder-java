@@ -1,4 +1,4 @@
-application.properties
+*.properties
 
 *.java.hsp
 *.sonarj
